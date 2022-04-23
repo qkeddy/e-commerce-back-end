@@ -1,6 +1,7 @@
 // Require supporting NPM modules
 const express = require("express");
 const routes = require("./routes");
+const sequelize = require("./config/connection");
 
 // Initialize the Express.js server
 const app = express();
