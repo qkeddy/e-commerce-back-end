@@ -8,14 +8,15 @@ const { Product, Category, Tag, ProductTag } = require("../../models");
 // Get all products and with associated Category and Tag data
 router.get("/", async (req, res) => {
     try {
-        const productData = await Product.findAll({
+      const productData = await Product.findAll({
+          // Category and Tag need to be treated as separate  elements in the array for the include include. This creates two left outer joins as 1) product by category and 2) product by productTag.
             include: [
+                { model: Category },
                 {
-                    model: Category,
                     model: Tag,
                     through: ProductTag,
                     as: "product_tags",
-                },
+                }
             ],
         });
         res.status(200).json(productData);
@@ -27,7 +28,7 @@ router.get("/", async (req, res) => {
 // Get a single product by its `id` with its associated Category and Tag data
 router.get("/:id", (req, res) => {});
 
-// create new product
+// create new productÍ
 router.post("/", (req, res) => {
     /* req.body should look like this...
     {
