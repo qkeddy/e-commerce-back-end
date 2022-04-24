@@ -12,6 +12,7 @@ const { Tag, Product, ProductTag } = require("../../models");
 router.get("/", async (req, res) => {
     try {
         const tagData = await Tag.findAll({
+            // JOIN with products, using the ProductTag through table
             include: [
                 {
                     model: Product,
