@@ -31,7 +31,9 @@ A link to the GitHub repository can be viewed [here](https://github.com/qkeddy/e
 
 
 ## Features
-API endpoints to support full CRUD operations against a simple E-Commerce database.
+- API endpoints to support full CRUD operations against a simple E-Commerce database.
+- Seed database to populate test data using Sequelize.
+
 
 ## Usage
 See steps above.
