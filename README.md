@@ -8,7 +8,7 @@
 ## Description
 A full CRUD back end for an e-commerce site using Express.js, Sequelize, and a MySQL database.
 
-A demo of this application can be viewed [here](https://drive.google.com/drive/folders/1eGtQmuHaB7FjvfSy-zWWvZlulHeevU6o?usp=sharing).
+A demo of this application can be viewed [here](https://drive.google.com/file/d/1iKPGEZBSAZsAVkSmambfkUsfHnoWCwen/view?usp=sharing).
 
 A link to the GitHub repository can be viewed [here](https://github.com/qkeddy/e-commerce-back-end).
 
@@ -25,11 +25,13 @@ A link to the GitHub repository can be viewed [here](https://github.com/qkeddy/e
 ## Deployment
 1. Fork and clone project repo
 2. Run `npm install`
-3. Open the CLI in the project folder and run `node server.js`
+3. Create a MySQL database called `ecommerce_db`. A script is available to automatically drop and create the MySQL database with the following: `source ./db/schema.sql`
+4. Seed the MySQL database `npm run seed`
+5. Open the CLI in the project folder and run `npm start` (or if in development use Nodemon: `npm run watch`)
 
 
 ## Features
-API endpoints to support full CRUD operations.
+API endpoints to support full CRUD operations against a simple E-Commerce database.
 
 ## Usage
 See steps above.
