@@ -26,7 +26,6 @@ router.get("/", async (req, res) => {
 
 // Find one category by its `id` value and the associated product(s)
 router.get("/:id", async (req, res) => {
-    console.log(req.params.id);
     try {
         const categoryData = await Category.findByPk(req.params.id, {
             include: [
